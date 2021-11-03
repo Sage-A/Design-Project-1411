@@ -18,16 +18,16 @@ def savings_goal():
     # solve for whatever variable is set to ?
     if "?" in s_goal: 
         choice1 = 1
-        m_cont = int(m_cont)
-        s_time =int(s_time)
+        m_cont = float(m_cont)
+        s_time =float(s_time)
     elif "?" in m_cont:
         choice1 = 2
-        s_goal = int(s_goal)
-        s_time = int(s_time)
+        s_goal = float(s_goal)
+        s_time = float(s_time)
     elif "?" in s_time:
         choice1 = 3
-        s_goal = int(s_goal)
-        m_cont = int(m_cont)
+        s_goal = float(s_goal)
+        m_cont = float(m_cont)
     else:
         return print("Please only enter two parameters") #return an error if all 3 parameters are given
     
