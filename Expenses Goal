@@ -1,0 +1,37 @@
+# Input expenses and income to find total spare money and transform data into a graph
+def expenses_calc():
+    quest_1 = "y"
+    total_expenses = 0.0
+    i = 1
+    quest_2 = 0
+    s_goal_2 = 0.0
+    s_time_2 = 0.0
+    m_cont_2 =0.0
+
+    # Input monthly expenses
+    print("Input monthly expenses")
+    while quest_1 == "y":
+        total_expenses = total_expenses + float(input("Expense #"+str(i)+ " : "))
+        quest_1 = input("Do you have more expenses? y/n > ")
+        i+=1
+    print("Your total monthy expenses are " + str(total_expenses))
+
+    # Input total income to calculate net income
+    total_income = float(input("What is your total monthly income? "))
+    net_income = total_income - total_expenses
+    print("Your net income is " + str(net_income))
+
+    # Calculate number of months or monthly contribution
+    s_goal_2 = float(input("What is your savings goal? "))
+    quest_2 = int(input("Do you want to find how many months till you reach your goal (1) or your monthly contribution (2)?"))
+    
+    # Calculate number of months to reach goal
+    if quest_2 == 1:
+        m_cont_2 = (float(input("What percent of your income do you want to contribute each month (No percent sign)? ")))/100
+        initial_balance = float(input("Current balance of savings account: "))
+        #number of month = goal/ (initial + (%*net income))
+        months_needed = s_goal_2/(initial_balance+ (m_cont_2*net_income))
+        print("If you contribute "+str(m_cont_2*100)+"% of your net monthly income ($"+str(m_cont_2*net_income)+"), you will reach your goal in "+str(months_needed)+" months.")
+    #Calculate monthly contribution
+    elif quest_2 == 2:
+        s_time_2 = float(input("When do you want to reach your goal by? "))
