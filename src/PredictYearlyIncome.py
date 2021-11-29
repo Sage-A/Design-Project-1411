@@ -1,3 +1,5 @@
+# Predict Yearly Income
+
 def predict_yearly_income():
     #input monthly income and total monthly expenses for multiple months which is then averaged out to determine the average annual yearly income
     quest_3 = "y"

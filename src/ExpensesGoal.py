@@ -1,3 +1,5 @@
+# Expenses Goal
+
 # Input expenses and income to find total spare money and transform data into a graph
 def expenses_calc():
     
