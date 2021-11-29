@@ -1,3 +1,5 @@
+# Calculates Saving Interests
+
 def calc_savings_interest():
     principle = float(input("What is the starting amount in your savings account? "))
     quest_4 = input("Is your interest rate annual or monthly? ")
